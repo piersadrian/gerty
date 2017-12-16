@@ -1,18 +1,35 @@
-# Gerty
+# GERTY: A Treacherous Computer
 
-To start your Phoenix server:
+GERTY is an HTTP server you can't trust.
 
-  * Install dependencies with `mix deps.get`
-  * Start Phoenix endpoint with `mix phx.server`
+Named after the [AI from _Moon_](<https://en.wikipedia.org/wiki/Moon_(film)>), GERTY exposes API endpoints that are unreliable and broken. It's useful as a testbed for programming against remote services on faulty or unreliable network connections.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Most of the time, GERTY will respond to requests with valid data in a timely manner. But not always. Sometimes, GERTY will respond with invalid or incomplete data or an illegal HTTP response code. Other times it will drop a connection or hang for longer than any sensible web service should.
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
+It's a good way to test that your gateway code is resilient to some real-world failure modes.
 
-## Learn more
+## API Documentation
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+**List Samples**
+
+`GET /api/stats -> JSON`
+
+Sample response body:
+
+```
+[
+  {
+    "sampled_at": "2017-06-05T12:49:43Z",
+    "count": 17
+  },
+  ...
+]
+```
+
+Notes:
+
+```
+This endpoint will respond with a random number of Sample elements in the response array.
+```
+
+---
