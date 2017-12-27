@@ -1,5 +1,5 @@
-defmodule GertyWeb.ErrorView do
-  use GertyWeb, :view
+defmodule HALWeb.ErrorView do
+  use HALWeb, :view
 
   def render("404.json", _assigns) do
     %{errors: %{detail: "Page not found"}}

@@ -1,6 +1,6 @@
-defmodule GertyWeb.StatsView do
-  use GertyWeb, :view
-  alias GertyWeb.StatsView
+defmodule HALWeb.StatsView do
+  use HALWeb, :view
+  alias HALWeb.StatsView
 
   def render("index.json", _) do
     count = (1.0 - :rand.uniform) * 100

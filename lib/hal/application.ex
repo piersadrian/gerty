@@ -1,4 +1,4 @@
-defmodule Gerty.Application do
+defmodule HAL.Application do
   use Application
 
   # See https://hexdocs.pm/elixir/Application.html
@@ -9,21 +9,21 @@ defmodule Gerty.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(GertyWeb.Endpoint, []),
-      # Start your own worker by calling: Gerty.Worker.start_link(arg1, arg2, arg3)
-      # worker(Gerty.Worker, [arg1, arg2, arg3]),
+      supervisor(HALWeb.Endpoint, []),
+      # Start your own worker by calling: HAL.Worker.start_link(arg1, arg2, arg3)
+      # worker(HAL.Worker, [arg1, arg2, arg3]),
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Gerty.Supervisor]
+    opts = [strategy: :one_for_one, name: HAL.Supervisor]
     Supervisor.start_link(children, opts)
   end
 
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    GertyWeb.Endpoint.config_change(changed, removed)
+    HALWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end

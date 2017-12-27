@@ -1,8 +1,8 @@
-defmodule GertyWeb.StatsControllerTest do
-  use GertyWeb.ConnCase
+defmodule HALWeb.StatsControllerTest do
+  use HALWeb.ConnCase
 
-  alias Gerty.IO
-  alias Gerty.IO.Stats
+  alias HAL.IO
+  alias HAL.IO.Stats
 
   @create_attrs %{}
   @update_attrs %{}

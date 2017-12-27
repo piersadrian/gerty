@@ -1,5 +1,5 @@
-defmodule GertyWeb.StatsController do
-  use GertyWeb, :controller
+defmodule HALWeb.StatsController do
+  use HALWeb, :controller
 
   def index(conn, _params) do
     rand = :rand.uniform * 10

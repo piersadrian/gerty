@@ -6,11 +6,11 @@
 use Mix.Config
 
 # Configures the endpoint
-config :gerty, GertyWeb.Endpoint,
+config :hal, HALWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "jemQNM0KJ+I4h7G/p0tvYf9EFfIumu4rKWT7oyjTtfpGddBsdQGxy3w4E4yJhe7N",
-  render_errors: [view: GertyWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Gerty.PubSub,
+  render_errors: [view: HALWeb.ErrorView, accepts: ~w(json)],
+  pubsub: [name: HAL.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger

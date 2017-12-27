@@ -1,11 +1,11 @@
-defmodule GertyWeb.Router do
-  use GertyWeb, :router
+defmodule HALWeb.Router do
+  use HALWeb, :router
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/api", GertyWeb do
+  scope "/api", HALWeb do
     pipe_through :api
     get "/stats", StatsController, :index
   end

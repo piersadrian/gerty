@@ -1,14 +1,14 @@
-defmodule GertyWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :gerty
+defmodule HALWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :hal
 
-  socket "/socket", GertyWeb.UserSocket
+  socket "/socket", HALWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
   # when deploying your static files in production.
   plug Plug.Static,
-    at: "/", from: :gerty, gzip: false,
+    at: "/", from: :hal, gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
   # Code reloading can be explicitly enabled under the
@@ -36,7 +36,7 @@ defmodule GertyWeb.Endpoint do
     key: "_gerty_key",
     signing_salt: "pL9B8SqW"
 
-  plug GertyWeb.Router
+  plug HALWeb.Router
 
   @doc """
   Callback invoked for dynamically configuring the endpoint.
