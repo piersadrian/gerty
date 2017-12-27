@@ -1,10 +1,10 @@
-# GERTY: A Treacherous Computer
+# HAL: A Treacherous Computer
 
-GERTY is an HTTP server you can't trust.
+HAL is an HTTP server you can't trust.
 
-Named after the [AI from _Moon_](<https://en.wikipedia.org/wiki/Moon_(film)>), GERTY exposes API endpoints that are unreliable and broken. It's useful as a testbed for programming against remote services on faulty or unreliable network connections.
+Named after the [ship computer from _2001: A Space Odyssey_](https://en.wikipedia.org/wiki/HAL_9000), HAL exposes API endpoints that are unreliable and broken. It's useful as a testbed for programming against remote services on faulty or unreliable network connections.
 
-Most of the time, GERTY will respond to requests with valid data in a timely manner. But not always. Sometimes, GERTY will respond with invalid or incomplete data or an illegal HTTP response code. Other times it will drop a connection or hang for longer than any sensible web service should.
+Most of the time, HAL will respond to requests with valid data in a timely manner. But not always. Sometimes, HAL will respond with invalid or incomplete data or an illegal HTTP response code. Other times it will drop a connection or hang for longer than any sensible web service should.
 
 It's a good way to test that your gateway code is resilient to some real-world failure modes.
 
